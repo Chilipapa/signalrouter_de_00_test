@@ -55,6 +55,18 @@
             outline: none;
             border-color: #0070ba;
         }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .coffee-button {
+            background-color: #FFDD00;
+            color: #000000;
+        }
+        .coffee-button:hover {
+            background-color: #E5C700;
+        }
     </style>
     <script src="script.js"></script>
 </head>
@@ -65,15 +77,13 @@
     </div>
     <p id="welcome-message" class="welcome-text">Herzlich willkommen, du hast es geschafft, schön dass du hier bist.</p>
     <img src="Signal.jpg" alt="Signal">
-    <p>
+    <div class="button-container">
         <a href="https://www.paypal.com/donate" class="donate-button">
             Über PayPal spenden
         </a>
-    </p>
-    <p style="margin-top: 10px;">
-        <a href="https://www.buymeacoffee.com" class="donate-button" style="background-color: #FFDD00; color: #000000;">
+        <a href="https://www.buymeacoffee.com" class="donate-button coffee-button">
             <span style="margin-right: 5px;">☕</span> Buy me a coffee
         </a>
-    </p>
+    </div>
 </body>
 </html>
