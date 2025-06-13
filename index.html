@@ -67,11 +67,36 @@
         .coffee-button:hover {
             background-color: #E5C700;
         }
+        .nav-links {
+            margin: 20px 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            font-size: 1.4em;  /* 30% kleiner als 2em */
+        }
+        .nav-links a {
+            color: #0070ba;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        .nav-links a:hover {
+            background-color: #f0f0f0;
+            text-decoration: underline;
+        }
     </style>
     <script src="script.js"></script>
 </head>
 <body>
     <h1>signalrouter.de</h1>
+    <ul class="nav-links">
+        <li><a href="seite1.html">Seite 1</a></li>
+        <li><a href="seite2.html">Seite 2</a></li>
+        <li><a href="seite3.html">Seite 3</a></li>
+    </ul>
     <div class="name-input">
         <input type="text" id="nameInput" placeholder="Dein Name" onchange="updateGreeting()">
     </div>
