@@ -31,7 +31,8 @@ const translations = {
         deleteRoutePrompt: "Which route should be deleted?",
         arduinoTitle: "Save current configuration as Arduino file",
         createArduinoButton: "Create Arduino File",
-        downloadArduinoButton: "Download Arduino"
+        downloadArduinoButton: "Download Arduino",
+        backToMain: "Back to main page"
     },
     fr: {
         titleTranslation: "(Routeur de Signaux)",
@@ -65,7 +66,8 @@ const translations = {
         deleteRoutePrompt: "Quel itinéraire doit être supprimé ?",
         arduinoTitle: "Enregistrer la configuration actuelle en tant que fichier Arduino",
         createArduinoButton: "Créer le fichier Arduino",
-        downloadArduinoButton: "Télécharger Arduino"
+        downloadArduinoButton: "Télécharger Arduino",
+        backToMain: "Retour à la page principale"
     },
     fy: {
         titleTranslation: "(Signaalrouter)",
@@ -99,7 +101,8 @@ const translations = {
         deleteRoutePrompt: "Welke Fahrstrecke sall löskt worden?",
         arduinoTitle: "Aktuelle Konfiguration as Arduino-Datei spiekern",
         createArduinoButton: "Arduino-Datei maken",
-        downloadArduinoButton: "Arduino runnerladen"
+        downloadArduinoButton: "Arduino runnerladen",
+        backToMain: "Werom na de haadside"
     },
     ru: {
         titleTranslation: "(Маршрутизатор Сигналов)",
@@ -133,7 +136,8 @@ const translations = {
         deleteRoutePrompt: "Какой маршрут нужно удалить?",
         arduinoTitle: "Сохранить текущую конфигурацию как файл Arduino",
         createArduinoButton: "Создать файл Arduino",
-        downloadArduinoButton: "Загрузить Arduino"
+        downloadArduinoButton: "Загрузить Arduino",
+        backToMain: "Вернуться на главную страницу"
     },
     it: {
         titleTranslation: "(Router dei Segnali)",
@@ -167,7 +171,8 @@ const translations = {
         deleteRoutePrompt: "Quale percorso deve essere eliminato?",
         arduinoTitle: "Salva la configurazione attuale come file Arduino",
         createArduinoButton: "Crea file Arduino",
-        downloadArduinoButton: "Scarica Arduino"
+        downloadArduinoButton: "Scarica Arduino",
+        backToMain: "Torna alla pagina principale"
     },
     ch: {
         titleTranslation: "(Signalrouter)",
@@ -201,7 +206,8 @@ const translations = {
         deleteRoutePrompt: "Weli Fahrstross söll glöscht werde?",
         arduinoTitle: "Aktuelli Konfiguration als Arduino-Datei spichere",
         createArduinoButton: "Arduino-Datei erstelle",
-        downloadArduinoButton: "Arduino abelade"
+        downloadArduinoButton: "Arduino abelade",
+        backToMain: "Zurück zur Hauptseite"
     },
     de: {
         titleTranslation: "(Signalrouter)",
@@ -235,6 +241,7 @@ const translations = {
         deleteRoutePrompt: "Welche Fahrstraße soll gelöscht werden?",
         arduinoTitle: "Aktuelle Konfiguration als Arduino-File speichern",
         createArduinoButton: "Arduino File erstellen",
-        downloadArduinoButton: "Arduino herunterladen"
+        downloadArduinoButton: "Arduino herunterladen",
+        backToMain: "Zurück zur Hauptseite"
     }
 };
