@@ -12,22 +12,27 @@
             padding: 20px;
             text-align: center;
             line-height: 1.6;
+            background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%); /* sanftes Blau passend zum Bild */
         }
         h1 {
-            color: #2c3e50;
+            color: #1a3a5d; /* dunkles Blau aus dem Bild */
             margin-bottom: 30px;
         }
         img {
             max-width: 100%;
             height: auto;
             margin: 30px 0;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            box-shadow: 0 4px 16px #b0c4de66;
         }
         .welcome-text {
             font-size: 1.2em;
             color: #34495e;
             margin-bottom: 30px;
+            background: rgba(255,255,255,0.85);
+            border-radius: 10px;
+            box-shadow: 0 2px 12px 0 #b0c4de33;
+            padding: 1em 0.5em;
         }
         .donate-button {
             display: inline-block;
@@ -35,11 +40,13 @@
             color: white;
             padding: 12px 24px;
             text-decoration: none;
-            border-radius: 4px;
-            transition: background-color 0.3s;
+            border-radius: 6px;
+            transition: background-color 0.3s, box-shadow 0.3s;
+            box-shadow: 0 2px 8px #b0c4de33;
         }
         .donate-button:hover {
             background-color: #005ea6;
+            box-shadow: 0 4px 16px #b0c4de66;
         }
         .name-input {
             margin: 20px 0;
@@ -47,13 +54,17 @@
         #nameInput {
             padding: 8px 16px;
             font-size: 1em;
-            border: 2px solid #ddd;
-            border-radius: 4px;
-            width: 200px;
+            border: 2px solid #b0c4de;
+            border-radius: 6px;
+            width: 220px;
+            background: #f0f6fb;
+            color: #1a3a5d;
+            transition: border 0.2s, background 0.2s;
         }
         #nameInput:focus {
             outline: none;
             border-color: #0070ba;
+            background: #e0eafc;
         }
         .button-container {
             display: flex;
@@ -74,17 +85,18 @@
             display: flex;
             justify-content: center;
             gap: 20px;
-            font-size: 2em; /* 2em für große, moderne Navigation */
+            font-size: 2em;
         }
         .nav-links a {
             color: #0070ba;
             text-decoration: none;
             padding: 5px 10px;
-            border-radius: 4px;
-            transition: background-color 0.3s;
+            border-radius: 6px;
+            transition: background-color 0.3s, color 0.3s;
         }
         .nav-links a:hover {
-            background-color: #f0f0f0;
+            background-color: #e0eafc;
+            color: #1a3a5d;
             text-decoration: underline;
         }
     </style>
