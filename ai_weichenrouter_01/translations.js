@@ -204,7 +204,7 @@ const translations = {
         downloadArduinoButton: "Arduino abelade"
     },
     de: {
-        titleTranslation: "",
+        titleTranslation: "(Signalrouter)",
         title: "Signalrouter",
         description: "Der Signalrouter ist ein kleines elektronisches Bauteil, mit dem du Fahrwege, also mehrere Signale gleichzeitig, unter einer selbstfestgelegten Schaltadresse steuern kannst.",
         inputTitle: "Gib hier alle Digitaladressen deiner Signale ein",
