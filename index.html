@@ -101,9 +101,21 @@
         }
     </style>
     <script src="script.js"></script>
+    <script>
+      // Heutiges Datum anzeigen
+      document.addEventListener('DOMContentLoaded', function() {
+        var dateDiv = document.getElementById('current-date');
+        if (dateDiv) {
+          var today = new Date();
+          var options = { year: 'numeric', month: 'long', day: 'numeric' };
+          dateDiv.textContent = today.toLocaleDateString('de-DE', options);
+        }
+      });
+    </script>
 </head>
 <body>
     <h1>signalrouter.de</h1>
+    <div id="current-date" style="font-size:1.1em; color:#205c20; margin-bottom:10px;"></div>
     <ul class="nav-links">
         <li><a href="seite1.html">Seite 1</a></li>
         <li><a href="seite2.html">Seite 2</a></li>
