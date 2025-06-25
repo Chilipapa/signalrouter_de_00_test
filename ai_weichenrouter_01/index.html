@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Weichenrouter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="language-selector">
+        <select id="languageSelect">
+            <option value="de">Deutsch</option>
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+            <option value="fy">Oostfreesk</option>
+            <option value="ru">Русский</option>
+            <option value="it">Italiano</option>
+            <option value="ch">Schweizerdeutsch</option>
+        </select>
+    </div>
+
+    <header>
+        <img src="images.jpeg" alt="Eisenbahnweiche" class="background-image left">
+        <div class="title-container">
+            <h1>Weichenrouter</h1>
+            <span class="title-translation" data-i18n="titleTranslation"></span>
+        </div>
+        <img src="Formsignale.jpg" alt="Eisenbahnsignal" class="background-image right">
+    </header>
+
+    <main>
+        <section class="info">
+            <p data-i18n="description">Der Weichenrouter ist ein kleines elektronisches Bauteil, mit dem du Fahrwege, also mehrere Weichen gleichzeitig, unter einer selbstfestgelegten Weichenschaltadresse steuern kannst.</p>
+        </section>
+
+        <section class="input-section">
+            <h2 data-i18n="inputTitle">Gib hier alle Digitaladressen deiner Weichen ein</h2>
+            <p data-i18n="inputDescription">Zuerst musst du alle Digitaladressen aller Weichen, die du schalten willst eingeben.</p>
+            
+            <div class="address-list" id="addressList">
+                <!-- Hier werden die eingegebenen Adressen angezeigt -->
+            </div>
+
+            <div class="input-container">
+                <input type="number" id="addressInput" min="1" max="1023" data-i18n-placeholder="addressPlaceholder" placeholder="Weichenadresse (1-1023)" autofocus>
+                <button id="addButton">OK</button>
+                <span id="message" class="message"></span>
+            </div>
+
+            <div class="controls">
+                <div class="dropdown-container">
+                    <select id="addressToDelete">
+                        <option value="" data-i18n="deleteOption">Adresse zum Löschen wählen</option>
+                    </select>
+                    <button id="deleteButton" data-i18n="deleteButton">Löschen</button>
+                </div>
+
+                <button id="clearAllButton" data-i18n="clearButton">Alle Eingaben löschen</button>
+                <button id="saveButton" data-i18n="saveButton">Liste speichern</button>
+                <button id="saveAsButton" data-i18n="saveAsButton">Liste speichern unter</button>
+                <button id="loadButton" data-i18n="loadButton">Liste laden</button>
+            </div>
+
+            <p class="save-info" data-i18n="saveInfo">Wenn du alle Adressen eingegeben hast, speicher alles ab.</p>
+        </section>
+
+        <section class="input-section route-section">
+            <h2 data-i18n="routeTitle">Eingabe der Fahrstraßen Adressen</h2>
+            <p class="warning-text" data-i18n="routeDescription">Die Adressen von den Fahrstraßen dürfen nicht die gleichen Adressen sein, die bei den Digitaladressen der Weichen vorkommen.</p>
+            
+            <div class="address-list" id="routeAddressList">
+                <!-- Hier werden die eingegebenen Fahrstraßen-Adressen angezeigt -->
+            </div>
+
+            <div class="input-container">
+                <input type="number" id="routeAddressInput" min="1" max="1023" data-i18n-placeholder="routeAddressPlaceholder" placeholder="Fahrstraßenadresse (1-1023)">
+                <button id="routeAddButton">OK</button>
+                <span id="routeMessage" class="message"></span>
+            </div>
+
+            <div class="controls">
+                <div class="dropdown-container">
+                    <select id="routeAddressToDelete">
+                        <option value="" data-i18n="routeDeleteOption">Adresse zum Löschen wählen</option>
+                    </select>
+                    <button id="routeDeleteButton" data-i18n="deleteButton">Löschen</button>
+                </div>
+
+                <button id="routeClearAllButton" data-i18n="clearButton">Alle Eingaben löschen</button>
+                <button id="routeSaveButton" data-i18n="saveButton">Liste speichern</button>
+                <button id="routeSaveAsButton" data-i18n="saveAsButton">Liste speichern unter</button>
+                <button id="routeLoadButton" data-i18n="loadButton">Liste laden</button>
+            </div>
+
+            <p class="save-info" data-i18n="routeSaveInfo">Wenn du alle Fahrstraßen-Adressen eingegeben hast, speicher alles ab.</p>
+        </section>
+
+        <section class="input-section route-connection">
+            <h2 data-i18n="connectionTitle">Verknüpfung von Fahrstraßen und Magnetartikeln</h2>
+            
+            <div id="routeConnectionsList" class="route-connections-list">
+                <!-- Hier werden die Fahrstraßen-Listen angezeigt -->
+            </div>
+
+            <div class="connection-controls">
+                <button id="newRouteButton" data-i18n="newRouteButton">Neue Fahrstraße</button>
+                <button id="editRouteButton" data-i18n="editRouteButton">Fahrstraße editieren</button>
+                <button id="deleteRouteButton" data-i18n="deleteRouteButton">Fahrstraße löschen</button>
+                <button id="loadRoutesButton" class="green-button" data-i18n="loadRoutesButton">Fahrstraßen laden</button>
+                <button id="saveRoutesButton" data-i18n="saveRoutesButton">Fahrstraßen speichern</button>
+            </div>
+
+            <div class="edit-container" style="display: none;">
+                <div class="selection-row">
+                    <div class="select-group">
+                        <label for="routeSelect" data-i18n="selectRoute">Fahrstraße:</label>
+                        <select id="routeSelect"></select>
+                    </div>
+                    <div class="select-group">
+                        <label for="magnetArticleSelect" data-i18n="selectMagnet">Magnetartikel:</label>
+                        <select id="magnetArticleSelect"></select>
+                    </div>
+                    <div class="select-group">
+                        <label for="stateSelect" data-i18n="selectState">Zustand:</label>
+                        <select id="stateSelect">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="delete">löschen</option>
+                        </select>
+                    </div>
+                    <button id="addConnectionButton" data-i18n="addConnectionButton">Hinzufügen</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="input-section arduino-export">
+            <h2 data-i18n="arduinoTitle">Aktuelle Konfiguration als Arduino-File speichern</h2>
+            
+            <div class="arduino-controls">
+                <button id="createArduinoButton" data-i18n="createArduinoButton">Arduino File erstellen</button>
+                <button id="downloadArduinoButton" class="green-button" data-i18n="downloadArduinoButton">Arduino herunterladen</button>
+            </div>
+
+            <div id="arduinoPreview" class="arduino-preview">
+                <!-- Hier wird der generierte Arduino-Code angezeigt -->
+            </div>
+        </section>
+    </main>
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

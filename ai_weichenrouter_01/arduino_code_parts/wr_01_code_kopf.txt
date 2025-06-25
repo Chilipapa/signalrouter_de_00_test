@@ -1,0 +1,15 @@
+include <XpressNet.h>
+XpressNetClass XpressNet;
+#define XNetAddress 27    //Adresse im XpressNet
+#define XNetSRPin 8       //Max485 Busdriver Send/Receive-PIN
+
+#include <NmraDcc.h>
+#define DCC_PIN 3
+NmraDcc Dcc;
+#define RED_LED 4
+#define GREEN_LED 5
+
+#define OFFSET 4  // Roco 4 und Lenz 0
+#define SPALTEN 9
+
+// 0 ist abbiegen, 1 ist geradeaus

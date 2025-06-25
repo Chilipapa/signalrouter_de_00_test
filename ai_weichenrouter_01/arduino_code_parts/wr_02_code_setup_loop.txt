@@ -1,0 +1,39 @@
+
+// the setup routine runs once when you press reset:
+void setup() {
+    pinMode(GREEN_LED, OUTPUT);
+    pinMode(RED_LED, OUTPUT);
+    digitalWrite(GREEN_LED, HIGH);
+    XpressNet.start(XNetAddress, XNetSRPin);    //Initialisierung XNet-Bus
+    Dcc.pin(digitalPinToInterrupt(DCC_PIN), DCC_PIN, false);
+    Dcc.init(MAN_ID_DIY, 1, FLAGS_DCC_ACCESSORY_DECODER | FLAGS_OUTPUT_ADDRESS_MODE, 0);
+}
+//---------------------------------------------------------------------------------------
+
+// the loop routine runs over and over again forever:
+void loop() {
+    XpressNet.receive();  //permernet update the library
+    Dcc.process();
+}
+//---------------------------------------------------------------------------------------
+
+void schalteEineWeiche(uint16_t adresse, uint8_t richtung) {
+   // die XPressNet Adressen sind etwas anders.
+   // hoher und niedriger Adresssanteil, 256 Weichen reichen
+   // bei der 256 gab es Probleme, sogar schon bei der 255
+   // und um 1 geringer also aus
+   // DCC Adresse 3 wird ExpressNet Adresse 2 : adresse -1
+
+   Weichestellen(0, adresse-1, richtung);
+}
+void schalteEineWeichenStrasse(short WeichenstrassenArray[]) {
+   for (short i = 2; i < WeichenstrassenArray[1]; i += 2) {
+     schalteEineWeiche(WeichenstrassenArray[i], (uint8_t)WeichenstrassenArray[i + 1]);
+   }
+}
+
+// das hier kommt in das DCC notifyDccAccTurnoutOutput rein
+void schalteAlleWeichenStrassenEinerBestimmtenAdresse(uint16_t weichenstrassenadresse) {
+   digitalWrite(GREEN_LED, LOW);
+   digitalWrite(RED_LED, HIGH);
+   switch(weichenstrassenadresse + OFFSET) {

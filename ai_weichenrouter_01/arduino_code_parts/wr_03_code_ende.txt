@@ -1,0 +1,34 @@
+     default: {break;}
+   }
+   digitalWrite(GREEN_LED, HIGH);
+   digitalWrite(RED_LED, LOW);
+}
+
+
+void Weichestellen(uint8_t Adr_High, uint8_t Adr_Low, uint8_t Pos) {
+    // seltsam, 0 ist abbiegen und 1 ist gerade aus
+    // das drehe ich hier wieder richtig 0 ist geradeaus, 1 ist abbiegen
+    //Pos = (Pos == 0) ? 1 : 0; // terärer Operator
+    // das erste mal den Weichenschaltbefehl erzeugen
+    XpressNet.setTrntPos(Adr_High, Adr_Low, Pos + 8); //ein
+    delay(100);// warten bis wieder aus gestellt wird
+    XpressNet.setTrntPos(Adr_High, Adr_Low, Pos); //aus
+
+    // zweimal ergibt weniger Fehler
+    XpressNet.setTrntPos(Adr_High, Adr_Low, Pos + 8); //ein
+    delay(100);// warten bis wieder aus gestellt wird
+    XpressNet.setTrntPos(Adr_High, Adr_Low, Pos); //aus
+
+    // dreimal ergibt vielleicht noch weniger Fehler??
+    // ausprobieren!! Ja, läuft bisher fehlerfrei
+    XpressNet.setTrntPos(Adr_High, Adr_Low, Pos + 8); //ein
+    delay(100);// warten bis wieder aus gestellt wird
+    XpressNet.setTrntPos(Adr_High, Adr_Low, Pos); //aus
+}
+
+
+// Hier steht die Reaktion auf den ausgelesenen Schaltbefehl.
+void notifyDccAccTurnoutOutput(uint16_t Addr, uint8_t Direction, uint8_t OutputPower) {
+    XpressNet.receive();
+    schalteAlleWeichenStrassenEinerBestimmtenAdresse(Addr);
+} 
