@@ -329,8 +329,10 @@ document.addEventListener('DOMContentLoaded', () => {
     function changeLanguage(lang) {
         document.querySelectorAll('[data-i18n]').forEach(element => {
             const key = element.getAttribute('data-i18n');
-            if (translations[lang] && translations[lang][key]) {
+            if (translations[lang] && translations[lang][key] !== undefined) {
                 element.textContent = translations[lang][key];
+            } else {
+                element.textContent = '';
             }
         });
 

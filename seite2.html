@@ -12,9 +12,10 @@
             padding: 20px;
             text-align: center;
             line-height: 1.6;
+            background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%); /* sanftes Blau passend zum Bild */
         }
         h1 {
-            color: #2c3e50;
+            color: #1a3a5d; /* dunkles Blau aus dem Bild */
             margin-bottom: 30px;
         }
         .back-link {
@@ -28,8 +29,9 @@
         }
         .background-image {
             height: 100px;
-            opacity: 0.7;
+            opacity: 0.85;
             object-fit: contain;
+            filter: drop-shadow(0 0 8px #b0c4de); /* leichter blauer Schatten */
         }
         .background-image.left {
             left: 0;
@@ -43,6 +45,42 @@
         }
         .input-section, .route-section, .route-connection, .arduino-export {
             margin-bottom: 2rem;
+            background: rgba(255,255,255,0.85);
+            border-radius: 12px;
+            box-shadow: 0 2px 12px 0 #b0c4de33;
+            padding: 1.5rem 1rem;
+        }
+        button, select, input[type="number"] {
+            background: #f0f6fb;
+            border: 1px solid #b0c4de;
+            border-radius: 6px;
+            color: #1a3a5d;
+            padding: 0.4em 1em;
+            margin: 0.2em;
+            transition: background 0.2s, border 0.2s;
+        }
+        button:hover, select:focus, input[type="number"]:focus {
+            background: #d6e6f3;
+            border-color: #0070ba;
+        }
+        .green-button {
+            background: #b6e2b6;
+            color: #205c20;
+            border-color: #7fc97f;
+        }
+        .green-button:hover {
+            background: #a0d6a0;
+        }
+        .message {
+            color: #c0392b;
+        }
+        .save-info {
+            color: #1a3a5d;
+            font-weight: 500;
+        }
+        .warning-text {
+            color: #c0392b;
+            font-weight: 500;
         }
     </style>
     <link rel="stylesheet" href="ai_weichenrouter_01/styles.css">
@@ -97,7 +135,8 @@
     <script src="ai_weichenrouter_01/script.js"></script>
 </head>
 <body>
-    <h1>Seite 2</h1>
+    <h1>Signalrouter</h1>
+    <a href="index.html" class="back-link" style="display:block;margin-bottom:30px;font-size:1.275em;">← Zurück zur Hauptseite</a>
     <!-- Start Signalrouter eingebettet -->
     <div id="signalrouter-embed">
         <div class="language-selector">
@@ -114,7 +153,6 @@
         <header>
             <img src="Signalrouter.png" alt="Signalrouter" class="background-image left">
             <div class="title-container">
-                <h1>Signalrouter</h1>
                 <span class="title-translation" data-i18n="titleTranslation"></span>
             </div>
             <img src="Signalrouter.png" alt="Signalrouter" class="background-image right">
@@ -212,6 +250,5 @@
         </main>
     </div>
     <!-- Ende Signalrouter eingebettet -->
-    <a href="index.html" class="back-link">← Zurück zur Hauptseite</a>
 </body>
 </html>
