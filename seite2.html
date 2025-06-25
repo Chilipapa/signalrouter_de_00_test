@@ -135,27 +135,28 @@
     <script src="ai_weichenrouter_01/script.js"></script>
 </head>
 <body>
-    <h1>Signalrouter</h1>
+    <img src="Signalrouter.png" alt="Signalrouter" style="display: block; margin: 0 auto 18px auto; height: 150px; width: auto; border-radius: 12px; box-shadow: 0 4px 16px #b0c4de66;">
+    <h1 style="margin-top: 0;">Signalrouter</h1>
+    <div class="title-container">
+        <span class="title-translation" data-i18n="titleTranslation"></span>
+    </div>
     <a href="index.html" class="back-link" style="display:block;margin-bottom:30px;font-size:1.275em;">← Zurück zur Hauptseite</a>
+    <div class="language-selector" style="margin: 0 auto 24px auto; max-width: 300px;">
+        <select id="languageSelect" style="width: 100%; font-size: 1.1em;">
+            <option value="de">Deutsch</option>
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+            <option value="fy">Oostfreesk</option>
+            <option value="ru">Русский</option>
+            <option value="it">Italiano</option>
+            <option value="ch">Schweizerdeutsch</option>
+        </select>
+    </div>
     <!-- Start Signalrouter eingebettet -->
     <div id="signalrouter-embed">
-        <div class="language-selector">
-            <select id="languageSelect">
-                <option value="de">Deutsch</option>
-                <option value="en">English</option>
-                <option value="fr">Français</option>
-                <option value="fy">Oostfreesk</option>
-                <option value="ru">Русский</option>
-                <option value="it">Italiano</option>
-                <option value="ch">Schweizerdeutsch</option>
-            </select>
-        </div>
+        <!-- language-selector hier entfernt, da oben eingefügt -->
         <header>
-            <img src="Signalrouter.png" alt="Signalrouter" class="background-image left">
-            <div class="title-container">
-                <span class="title-translation" data-i18n="titleTranslation"></span>
-            </div>
-            <img src="Signalrouter.png" alt="Signalrouter" class="background-image right">
+            <!-- rechtes Bild entfernt -->
         </header>
         <main>
             <section class="info">
