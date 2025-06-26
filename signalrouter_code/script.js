@@ -748,7 +748,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Arduino Code erstellen
     createArduinoButton.addEventListener('click', async () => {
         // Teil 1: Lade den Kopf-Code
-        const response1 = await fetch('arduino_code_parts/wr_01_code_kopf.txt');
+        const response1 = await fetch('signalrouter_code/arduino_code_parts/wr_01_code_kopf.txt');
         const codePart1 = await response1.text();
         
         // Teil 2: Generiere die ShortArrays aus den gespeicherten Fahrstraßen
@@ -768,7 +768,7 @@ document.addEventListener('DOMContentLoaded', () => {
         shortArraysContent += "// ENDE : ShortArrays\n\n";
         
         // Teil 3: Lade den Setup-Loop-Code
-        const response2 = await fetch('arduino_code_parts/wr_02_code_setup_loop.txt');
+        const response2 = await fetch('signalrouter_code/arduino_code_parts/wr_02_code_setup_loop.txt');
         const codePart3 = await response2.text();
         
         // Teil 4: Generiere die CaseZeilen aus den gespeicherten Fahrstraßen
@@ -779,7 +779,7 @@ document.addEventListener('DOMContentLoaded', () => {
         caseZeilenContent += "   // ENDE : CaseZeilen\n\n";
 
         // Teil 5: Lade den Ende-Code
-        const response3 = await fetch('arduino_code_parts/wr_03_code_ende.txt');
+        const response3 = await fetch('signalrouter_code/arduino_code_parts/wr_03_code_ende.txt');
         const codePart5 = await response3.text();
 
         // Kombiniere alle Code-Teile in der richtigen Reihenfolge
