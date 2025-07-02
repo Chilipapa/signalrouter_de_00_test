@@ -525,7 +525,8 @@ document.addEventListener('DOMContentLoaded', () => {
         editContainer.style.display = 'block';
         resetEditForm();
         updateRouteSelect(false); // Zeige alle möglichen Fahrstraßen
-        addConnectionButton.textContent = 'Hinzufügen';
+        const currentLang = document.getElementById('languageSelect').value;
+        addConnectionButton.textContent = translations[currentLang].addConnectionButton || 'Hinzufügen';
     });
 
     editRouteButton.addEventListener('click', () => {
