@@ -94,7 +94,7 @@
             translations.de.description = "Der Signalrouter ist ein kleines elektronisches Bauteil, mit dem du Fahrwege, also mehrere Signale gleichzeitig, unter einer selbstfestgelegten Schaltadresse steuern kannst.";
             translations.de.inputTitle = "Gib hier alle Digitaladressen deiner Signale ein";
             translations.de.inputDescription = "Zuerst musst du alle Digitaladressen aller Signale, die du schalten willst eingeben.";
-            translations.de.addressPlaceholder = "Signaladresse (1-1023)";
+            translations.de.addressPlaceholder = "Signaladresse (1-254)";
             translations.de.routeDescription = "Die Adressen von den Fahrstraßen dürfen nicht die gleichen Adressen sein, die bei den Digitaladressen der Signale vorkommen.";
             // Englisch
             translations.en.title = "Signal Router";
@@ -102,7 +102,7 @@
             translations.en.description = "The Signal Router is a small electronic component that allows you to control multiple signals simultaneously under a self-defined signal control address.";
             translations.en.inputTitle = "Enter all digital addresses of your signals here";
             translations.en.inputDescription = "First, you need to enter all digital addresses of all signals you want to control.";
-            translations.en.addressPlaceholder = "Signal address (1-1023)";
+            translations.en.addressPlaceholder = "Signal address (1-254)";
             translations.en.routeDescription = "The addresses for the routes must not be the same addresses that appear in the digital addresses of the signals.";
             // Französisch
             translations.fr.title = "Routeur de Signaux";
@@ -110,7 +110,7 @@
             translations.fr.description = "Le Routeur de Signaux est un petit composant électronique qui vous permet de contrôler plusieurs signaux simultanément sous une adresse de contrôle auto-définie.";
             translations.fr.inputTitle = "Entrez ici toutes les adresses numériques de vos signaux";
             translations.fr.inputDescription = "D'abord, vous devez entrer toutes les adresses numériques de tous les signaux que vous souhaitez contrôler.";
-            translations.fr.addressPlaceholder = "Adresse de signal (1-1023)";
+            translations.fr.addressPlaceholder = "Adresse de signal (1-254)";
             translations.fr.routeDescription = "Les adresses des itinéraires ne doivent pas être les mêmes que celles utilisées pour les signaux.";
             // Niederländisch (Ostfriesisch)
             translations.fy.title = "Signaalrouter";
@@ -118,7 +118,7 @@
             translations.fy.description = "De Signaalrouter is en lüttjet elektronisk Onderdeel, waarmit du mehrere Signale gliektiedig unner en sülvst fastleggt Signaaladress stüren kannst.";
             translations.fy.inputTitle = "Geev hier all digital Adressen van dien Signale in";
             translations.fy.inputDescription = "Eerst musst du all digital Adressen van all Signale, de du schalten wullt, ingeven.";
-            translations.fy.addressPlaceholder = "Signaaladress (1-1023)";
+            translations.fy.addressPlaceholder = "Signaaladress (1-254)";
             translations.fy.routeDescription = "De Adressen van de Fahrstrecken dürt neet dieselven Adressen wesen as de van de Signale.";
             // Russisch
             translations.ru.title = "Маршрутизатор Сигналов";
@@ -126,7 +126,7 @@
             translations.ru.description = "Маршрутизатор сигналов - это небольшой электронный компонент, позволяющий управлять несколькими сигналами одновременно под самостоятельно определенным адресом управления.";
             translations.ru.inputTitle = "Введите здесь все цифровые адреса ваших сигналов";
             translations.ru.inputDescription = "Сначала необходимо ввести все цифровые адреса всех сигналов, которыми вы хотите управлять.";
-            translations.ru.addressPlaceholder = "Адрес сигнала (1-1023)";
+            translations.ru.addressPlaceholder = "Адрес сигнала (1-254)";
             translations.ru.routeDescription = "Адреса маршрутов не должны совпадать с цифровыми адресами сигналов.";
         }
     });
@@ -167,7 +167,7 @@
                 <p data-i18n="inputDescription">Zuerst musst du alle Digitaladressen aller Signale, die du schalten willst eingeben.</p>
                 <div class="address-list" id="addressList"></div>
                 <div class="input-container">
-                    <input type="number" id="addressInput" min="1" max="1023" data-i18n-placeholder="addressPlaceholder" placeholder="Signaladresse (1-1023)" autofocus>
+                    <input type="number" id="addressInput" min="1" max="254" data-i18n-placeholder="addressPlaceholder" placeholder="Signaladresse (1-254)" autofocus>
                     <button id="addButton">OK</button>
                     <span id="message" class="message"></span>
                 </div>

@@ -49,8 +49,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Weichenadressen Funktionen
     const addAddress = () => {
         const value = parseInt(addressInput.value);
-        if (isNaN(value) || value < 1 || value > 1023) {
-            message.textContent = `Ungültige Eingabe "${addressInput.value}". Bitte gib eine Zahl zwischen 1 und 1023 ein.`;
+        if (isNaN(value) || value < 1 || value > 254) {
+            message.textContent = `Ungültige Eingabe "${addressInput.value}". Bitte gib eine Zahl zwischen 1 und 254 ein.`;
             addressInput.value = '';
             return;
         }
@@ -188,7 +188,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     const addressLine = lines.slice(1, -1).join('').trim();
                     const newAddresses = addressLine.split(';')
                         .map(str => parseInt(str.trim()))
-                        .filter(num => !isNaN(num) && num >= 1 && num <= 1023);
+                        .filter(num => !isNaN(num) && num >= 1 && num <= 254);
                     
                     // Prüfe auf Konflikte mit Fahrstraßen-Adressen
                     const conflicts = newAddresses.filter(addr => routeAddresses.includes(addr));
@@ -252,7 +252,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     const magnetLine = lines.slice(magnetStartIndex + 1, magnetEndIndex).join('').trim();
                     addresses = magnetLine.split(';')
                         .map(str => parseInt(str.trim()))
-                        .filter(num => !isNaN(num) && num >= 1 && num <= 1023);
+                        .filter(num => !isNaN(num) && num >= 1 && num <= 254);
                     updateAddressList();
                     updateDeleteDropdown();
                 }
