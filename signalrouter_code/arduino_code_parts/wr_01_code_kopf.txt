@@ -1,4 +1,4 @@
-include <XpressNet.h>
+#include <XpressNet.h>
 XpressNetClass XpressNet;
 #define XNetAddress 27    //Adresse im XpressNet
 #define XNetSRPin 8       //Max485 Busdriver Send/Receive-PIN
