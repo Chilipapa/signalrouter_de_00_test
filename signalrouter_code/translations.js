@@ -95,7 +95,7 @@ const translations = {
         loadRoutesButton: "Fahrstrecken laden",
         saveRoutesButton: "Fahrstrecken spiekern",
         selectRoute: "Fahrstrecke:",
-        selectMagnet: "Signal:",
+        selectMagnet: "Magnetartikel:",
         selectState: "Tostand:",
         addConnectionButton: "Tofögen",
         deleteRoutePrompt: "Welke Fahrstrecke sall löskt worden?",

@@ -1,7 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Setze Deutsch als Standardsprache
-    document.getElementById('languageSelect').value = 'de';
-    changeLanguage('de');
+    // Setze zuletzt gewählte Sprache oder Standard (de)
+    const lang = localStorage.getItem('selectedLanguage') || 'de';
+    const languageSelect = document.getElementById('languageSelect');
+    if (languageSelect) languageSelect.value = lang;
+    changeLanguage(lang);
 
     // Weichenadressen Elemente
     const addressInput = document.getElementById('addressInput');
@@ -468,7 +470,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const updateMagnetArticleSelect = () => {
         const currentRoute = parseInt(routeSelect.value);
-        magnetArticleSelect.innerHTML = '<option value="">Magnetartikel auswählen</option>';
+        const currentLang = document.getElementById('languageSelect').value;
+        const placeholder = translations[currentLang].selectMagnet || 'Magnetartikel auswählen';
+        magnetArticleSelect.innerHTML = `<option value="">${placeholder}</option>`;
         
         // Alle Magnetartikel anzeigen, wenn wir im Edit-Modus sind
         if (editModeActive) {
