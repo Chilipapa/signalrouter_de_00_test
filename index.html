@@ -114,18 +114,28 @@
     </script>
 </head>
 <body>
-    <h1>signalrouter.de</h1>
+    <h1 style="display: flex; align-items: center; justify-content: center; gap: 18px; font-size: 2.2em;">
+        <img src="Signalrouter.png" alt="Signalrouter" style="height: 4.5em; vertical-align: middle; border-radius: 6px; box-shadow: 0 2px 8px #b0c4de33; margin: 0;">
+        signalrouter.de
+        <img src="Signalrouter.png" alt="Signalrouter" style="height: 4.5em; vertical-align: middle; border-radius: 6px; box-shadow: 0 2px 8px #b0c4de33; margin: 0;">
+    </h1>
     <div id="current-date" style="font-size:1.1em; color:#205c20; margin-bottom:10px;"></div>
     <ul class="nav-links">
         <li><a href="seite1.html">Seite 1</a></li>
         <li><a href="seite2.html">Seite 2</a></li>
         <li><a href="seite3.html">Seite 3</a></li>
     </ul>
-    <div class="name-input">
-        <input type="text" id="nameInput" placeholder="Dein Name" onchange="updateGreeting()">
-    </div>
-    <p id="welcome-message" class="welcome-text">Herzlich willkommen, du hast es geschafft, schön dass du hier bist.</p>
+    <p id="welcome-message" class="welcome-text">
+        <b>Signalrouter – Fahrstraßen einfach schalten</b><br><br>
+        Auch auf kleinen und mittleren Modellbahnanlagen gibt es Fahrstraßen – feste Abfolgen von Weichen und Signalen, die nacheinander einzeln geschaltet werden müssen. Digital bedeutet das meist: Für jeden Magnetartikel die jede Adresse einzeln eingeben und schalten.<br><br>
+        Viele Modellbahner wollen dafür nicht extra den PC starten oder ein komplexes Steuerungsprogramm verwenden. Sie möchten einfach mit ihrer Handsteuerung fahren – und mit <b>einem einzigen Befehl</b> eine gesamte Fahrstraße schalten.<br><br>
+        Genau dafür gibt es den <b>Signalrouter</b>:<br>
+        <b>Eine Adresse genügt</b> – der Signalrouter übernimmt den Rest und schaltet automatisch alle zugehörigen Weichen und Signale in der richtigen Reihenfolge.<br><br>
+        Einmal konfiguriert und auf den Arduino übertragen, arbeitet der Signalrouter zuverlässig und ist sofort bereit für den Einsatz.<br><br>
+        Danach gilt, einschalten und losfahren.
+    </p>
     <img src="Signalrouter.png" alt="Signalrouter">
+
     <div class="button-container">
         <a href="https://www.paypal.com/donate" class="donate-button">
             Über PayPal spenden
