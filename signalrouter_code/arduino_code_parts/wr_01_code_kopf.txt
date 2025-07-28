@@ -12,4 +12,7 @@ NmraDcc Dcc;
 #define OFFSET 4  // Roco 4 und Lenz 0
 #define SPALTEN 9
 
+// signalrouter.de by chilipapa.com
+// Arrduino Code - November 2023
+
 // 0 ist abbiegen, 1 ist geradeaus

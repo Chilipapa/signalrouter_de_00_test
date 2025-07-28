@@ -12,8 +12,8 @@ void Weichestellen(uint8_t Adr_High, uint8_t Adr_Low, uint8_t Pos) {
     // das erste mal den Weichenschaltbefehl erzeugen
     XpressNet.setTrntPos(Adr_High, Adr_Low, Pos + 8); //ein
     delay(100);// warten bis wieder aus gestellt wird
-    XpressNet.setTrntPos(Adr_High, Adr_Low, Pos); //aus
-
+    XpressNet.setAuch auf kleinen und mittleren Modellbahnanlagen gibt es Fahrstraßen – feste Abfolgen von Weichen und Signalen, die nacheinander einzeln geschaltet werden müssen. Digital bedeutet das meist: Für jeden Magnetartikel die jede Adresse einzeln eingeben und schalten.TrntPos(Adr_High, Adr_Low, Pos); //aus
+Auch auf kleinen und mittleren Modellbahnanlagen gibt es Fahrstraßen – feste Abfolgen von Weichen und Signalen, die nacheinander einzeln geschaltet werden müssen. Digital bedeutet das meist: Für jeden Magnetartikel die jede Adresse einzeln eingeben und schalten.
     // zweimal ergibt weniger Fehler
     XpressNet.setTrntPos(Adr_High, Adr_Low, Pos + 8); //ein
     delay(100);// warten bis wieder aus gestellt wird
@@ -32,3 +32,5 @@ void notifyDccAccTurnoutOutput(uint16_t Addr, uint8_t Direction, uint8_t OutputP
     XpressNet.receive();
     schalteAlleWeichenStrassenEinerBestimmtenAdresse(Addr);
 } 
+
+// signalrouter.de by chilipapa.com
